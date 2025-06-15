@@ -28,3 +28,19 @@
 
 
 // Код задания 3
+
+
+/**
+ Задание 4.
+Чем отличаются undefined и null? Проверьте результат выполнения следующего кода.
+
+    let a;
+    let b = null;
+
+    console.log(a == b);  // ?
+    console.log(a === b); // ?
+    console.log(typeof a); // ?
+    console.log(typeof b); // ?
+ **/
+
+// Код задания 4
