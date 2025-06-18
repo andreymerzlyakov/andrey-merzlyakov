@@ -5,6 +5,11 @@
 
 // Код задания 1
 
+function greet(name) {
+   console.log("Привет, " + name + "!")
+}
+
+greet("Alice")
 
 /** Задание 2.
  * Перепиши функцию `multiply` в виде стрелочной функции.
@@ -15,6 +20,12 @@
 
 // Код задания 2
 
+const multiply = (a, b) => {
+   return a * b;
+}
+
+console.log(multiply(3, 5))
+
 /**
  * Задание 3.
  Создай стрелочную функцию sum, которая принимает два числа и возвращает их сумму.
@@ -22,7 +33,11 @@
 
 // Код задания 3
 
+const sum = (a, b) => {
+   return a + b;
+};
 
+console.log(sum(2, 3))
 
 /**
  * Задание 4.
@@ -31,6 +46,16 @@
 
 // Код задания 4
 
+function isEven(num) {
+   if (num % 2 == 0) {
+      return true;
+   }
+   else {
+      return false;
+   }
+}
+
+console.log(isEven(2))
 
 /**
  * Задание 5.
@@ -41,6 +66,11 @@
 
 // Код задания 5
 
+function formatName(firstName, lastName) {
+   return firstName + " " + lastName.substring(0, 1) + "."
+}
+
+console.log(formatName("Иванов", "Иван"))
 
 /**
  * Задание 6.
@@ -53,12 +83,43 @@
 
 // Код задания 6
 
+function translateStatus(code) {
+   if (code == "success"){
+      return "Успешно"
+   }
+   else if (code == "error"){
+      return "Ошибка"
+   }
+   else if (code == "pending"){
+      return "В ожидании"
+   }
+   else {
+      return "Неизвестно"
+   }
+}
+
+console.log(translateStatus("qwe"))
 
 /**
  * Задание 7.
  Функция canLogin(user) возвращает true, если user.isActive === true и user.role === 'admin'.
  **/
 // Код задания 7
+
+const user = {
+   isActive: true, role: "admin"
+}
+
+function canLogin(user) {
+   if (user.isActive === true && user.role === 'admin') {
+      return true
+   }
+   else {
+      return false
+   }
+}
+
+console.log(canLogin(user))
 
 /**
  * Задание 8.
@@ -71,3 +132,9 @@
  **/
 
 // Код задания 8
+
+const showArgs = (...arguments) => {
+   console.log(arguments);
+};
+
+showArgs(1, 2, 3, 4, 4, 4, 2);
