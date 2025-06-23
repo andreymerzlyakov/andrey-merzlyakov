@@ -33,13 +33,19 @@ console.log(unique(arr))
 
 function filterRange(arr, a, b) {
   let arr2 = []
+  if (a < 0) {
+    a = 0
+  }
+  if (b > arr.length) {
+    b = arr.length
+  }
   for (let i = a; i < b; i++) {
     arr2.push(arr[i])
   }
   return arr2
 }
 
-console.log(filterRange(arr, 1, 4))
+console.log(filterRange(arr, -1, 111))
 
 /** Задание 4.
 Напиши метод`sortDesc(arr)`, сортирующую числовой массив по убыванию без изменения оригинала.
@@ -97,6 +103,9 @@ console.log(groupBy(arr, (num) => num % 2 === 0 ? 'even' : 'odd'))
 
 function rotate(arr, n) {
   let arr2 = []
+  while (n > arr.length) {
+    n -= arr.length
+  }
   for (let i = arr.length - n; i < arr.length; i++) {
     arr2.push(arr[i])
   }
@@ -106,4 +115,4 @@ function rotate(arr, n) {
   return arr2
 }
 
-console.log(rotate([1,2,3,4,5], 3))
+console.log(rotate([1,2,3,4,5], 6))

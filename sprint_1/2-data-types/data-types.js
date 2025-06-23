@@ -45,23 +45,19 @@ console.log(Number(123) + 5) // здесь первая переменная м�
 
 function type(abc) {
     abc = typeof(abc)
-    if (abc == "string") {
-        return "Это строка"
-    }
-    else if (abc == "number") {
-        return "Это число"
-    }
-    else if (abc == "boolean") {
-        return "Это логическое значение"
-    }
-    else if (abc == "bigint") {
-        return "Это bigint"
-    }
-    else if (abc == "symbol") {
-        return "Это символ"
-    }
-    else{
-        return "Это объект"
+    switch (abc) {
+        case "string":
+            return "Это строка"
+        case "number":
+            return "Это число"
+        case "boolean":
+            return "Это логическое значение"
+        case "bigint":
+            return "Это bigint"
+        case "symbol":
+            return "Это символ"
+        default:
+            return "Это объект"
     }
 }
 

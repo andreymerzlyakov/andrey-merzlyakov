@@ -67,10 +67,13 @@ console.log(isEven(2))
 // Код задания 5
 
 function formatName(firstName, lastName) {
-   return firstName + " " + lastName.substring(0, 1) + "."
+   if (lastName != "" && lastName != undefined) {
+      return firstName + " " + lastName.substring(0, 1) + "."
+   }
+   return "Введите фамилию"
 }
 
-console.log(formatName("Иванов", "Иван"))
+console.log(formatName("Иванов"))
 
 /**
  * Задание 6.
@@ -84,19 +87,17 @@ console.log(formatName("Иванов", "Иван"))
 // Код задания 6
 
 function translateStatus(code) {
-   if (code == "success"){
-      return "Успешно"
+   switch (code) {
+      case "success":
+         return "Успешно"
+      case "error":
+         return "Ошибка"
+      case "pending":
+         return "В ожидании"
+      default:
+         return "Неизвестно"
+      }
    }
-   else if (code == "error"){
-      return "Ошибка"
-   }
-   else if (code == "pending"){
-      return "В ожидании"
-   }
-   else {
-      return "Неизвестно"
-   }
-}
 
 console.log(translateStatus("qwe"))
 
@@ -114,9 +115,7 @@ function canLogin(user) {
    if (user.isActive === true && user.role === 'admin') {
       return true
    }
-   else {
-      return false
-   }
+   return false
 }
 
 console.log(canLogin(user))

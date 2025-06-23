@@ -32,7 +32,7 @@ let age = "18";
 let status = "login";
 // userName = "Roma";
 // изменение переменной вызавает ошибку, потому что const создает константу, доступную только для чтения
-let hello = "Привет, " + userName + "!";
+let hello = `Привет, ${userName} !`;
 
 console.log(hello)
 
@@ -68,5 +68,5 @@ console.log(userCount);
 // Ответ на задание 4
 
 10
-20
-30
+// b is not defiend
+// c is not defiend

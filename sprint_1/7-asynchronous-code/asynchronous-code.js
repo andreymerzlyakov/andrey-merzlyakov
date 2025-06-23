@@ -38,12 +38,12 @@ function sequentialLogs() {
 // Код задания 3
 
 function checkNumber(num) {
-    return new Promise((more, less) => {
+    return new Promise((resolve, reject) => {
         if (num > 10) {
-            more("OK");
+            resolve("OK");
         } 
         else {
-            less("Too small");
+            reject("Too small");
         }
     });
 }

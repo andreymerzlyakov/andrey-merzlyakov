@@ -10,16 +10,14 @@
 
 function checkAge(age) {
     if (age >= 18) {
-        console.log("Доступ разрешён")
+        return "Доступ разрешён"
     }
-    else {
-        console.log("Доступ запрещён")
-    }
+    return "Доступ запрещён"
 }
 
-checkAge(10)
-checkAge(18)
-checkAge(26)
+console.log(checkAge(10))
+console.log(checkAge(18))
+console.log(checkAge(26))
 
 /**
  * Задание 2.
@@ -29,7 +27,7 @@ checkAge(26)
 
 // Код задания 2
 
-for (let i = 0; i < 11; i++) {
+for (let i = 1; i <= 10; i++) {
     console.log(i)
 }
 
@@ -77,9 +75,7 @@ function block(currDate) {
     if (currDate.getHours() > 22, currDate.getHours() < 7) {
         return "Ночная блокировка: операции недоступны"
     }
-    else {
-        return true
-    }
+    return true
 }
 
 console.log(block(new Date()))
@@ -129,10 +125,10 @@ for (let i = 0; i < productList.length; i++) {
 console.log("Задание 6")
 
 for (let i = 0; i < productList.length; i++) {
+    let ewq = productList[i].price - productList[i].price / 100 * 20
     if (productList[i].price > 40) {
-        let ewq = productList[i].price - productList[i].price / 100 * 20
         for (let q = 0; q < 1; q++)
-            console.log(i + ". " + productList[i].name + " - " + ewq + "₽")
+            console.log(`${i}. ${productList[i].name} - ${ewq}₽`)
     }
 }
 
@@ -149,18 +145,20 @@ for (let i = 0; i < productList.length; i++) {
 console.log("Задание 7")
 
 eew = []
-for (let i = 1; i < 101; i++) {
-    if (i % 3 == 0 && i % 5 == 0){
-        eew.push('FizzBuzz')
-    }
-    else if (i % 3 == 0){
-        eew.push('Fizz')
-    }
-    else if (i % 5 == 0){
-        eew.push('Buzz')
-    }
-    else {
-        eew.push(i)
+for (let i = 1; i <= 100; i++) {
+    switch (0) {
+        case i % 15:
+            eew.push("FizzBuzz")
+            break
+        case i % 3:
+            eew.push("Fizz")
+            break
+        case i % 5:
+            eew.push("Buzz")
+            break
+        default:
+            eew.push(i)
     }
 }
+
 console.log(eew)
